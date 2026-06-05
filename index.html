@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pro-Ships & Pro-Planes Benchmark</title>
+  <title>PSP Benchmark</title>
 
   <style>
     /* =========================
@@ -399,11 +399,11 @@
        Header
   ========================== -->
   <header class="hero-banner">
-    <img src="assets/images/banner.png" alt="Pro-Ships and Pro-Planes banner" class="hero-image">
+    <img src="assets/images/banner.png" alt="PSP.Ship and PSP.Plane banner" class="hero-image">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Pro-Ships & Pro-Planes</h1>
-      <p>Benchmarks for Model-Specific Aerial Object Detection</p>
+      <h1>PSP Benchmark </h1>
+      <p>for Model-Specific Aerial Ship and Plane Detection</p>
     </div>
   </header>
 
@@ -436,14 +436,14 @@
             To facilitate model-specific aerial object detection,
             we focus on two representative object categories in aerial imagery,
             ship and aircraft, and construct two fine-grained object detection datasets,
-            <strong>Pro-Ships</strong> and <strong>Pro-Planes</strong>.
+            <strong>PSP.Ship</strong> and <strong>PSP.Plane</strong>.
             Unlike existing fine-grained datasets that often mix specific classes
             (e.g., Asagiri-class) with generic, unresolved sub-categories
             (e.g., Destroyer) at the same taxonomic level,
             our datasets introduce a carefully curated hierarchical taxonomy
             that organizes object models in a consistent and fine-grained manner.
-            Within this taxonomy, <strong>Pro-Ships</strong> contains 106 ship models
-            and <strong>Pro-Planes</strong> includes 30 airplane models,
+            Within this taxonomy, <strong>PSP.Ship</strong> contains 106 ship models
+            and <strong>PSP.Plane</strong> includes 30 airplane models,
             providing the most extensive coverage of model-specific categories
             among existing fine-grained aerial object detection datasets to date.
           </p>
@@ -471,7 +471,7 @@
           <h2>Dataset Information</h2>
           <p>
             This section describes the data sources, annotation protocol, hierarchical taxonomy, attribute
-            annotations, and dataset splits of <strong>Pro-Ships</strong> and <strong>Pro-Planes</strong>.
+            annotations, and dataset splits of <strong>PSP.Ship</strong> and <strong>PSP.Plane</strong>.
           </p>
 
           <h3>Task Definition</h3>
@@ -483,13 +483,13 @@
             similar object models with subtle differences in size, style, and structure.
           </p>
 
-          <h3>Pro-Ships</h3>
+          <h3>PSP.Ship</h3>
           <div class="gallery-item data-overview">
-            <img src="assets/images/pro-ships.png" alt="Pro-Ships data overview" />
-            <p>Data overview of Pro-Ships.</p>
+            <img src="assets/images/pro-ships.png" alt="PSP.Ship data overview" />
+            <p>Data overview of PSP.Ship.</p>
           </div>
           <p>
-            The images in <strong>Pro-Ships</strong> are collected from Google Earth imagery and selected images from
+            The images in <strong>PSP.Ship</strong> are collected from Google Earth imagery and selected images from
             existing datasets, including ShipRSImageNet, MCSD, and DOTA-v2, with spatial resolutions ranging from
             <strong>0.1 m to 2 m</strong>. For the Google Earth imagery, ship instances are manually annotated with
             rotated bounding boxes and model-specific labels. For the selected images from existing datasets, the
@@ -507,7 +507,7 @@
           </p>
 
           <p>
-            Overall, <strong>Pro-Ships</strong> contains <strong>1,953 images</strong> with
+            Overall, <strong>PSP.Ship</strong> contains <strong>1,953 images</strong> with
             <strong>5,214 ship instances</strong> covering <strong>106 ship models</strong>. The dataset is randomly
             split into training and test sets at a ratio of <strong>4:1</strong>. The training set contains
             <strong>1,563 images</strong> with <strong>4,181 instances</strong> spanning
@@ -515,7 +515,7 @@
             <strong>1,033 instances</strong> spanning <strong>91 ship models</strong>.
           </p>
 
-          <h3>Pro-Ships Taxonomy</h3>
+          <h3>PSP.Ship Taxonomy</h3>
           <p>
             Instead of treating each ship model as an independent flat category, we organize the 106 ship models into
             a <strong>four-level hierarchical taxonomy</strong> following publicly available ship classification
@@ -530,7 +530,7 @@
             <em>Arleigh Burke-class</em>, and <em>Asagiri-class</em>.
           </p>
 
-          <h3>Pro-Ships Attributes</h3>
+          <h3>PSP.Ship Attributes</h3>
           <p>
             For each ship class, we annotate <strong>11 attributes</strong> derived from publicly available
             information. These attributes capture visual cues from three perspectives:
@@ -547,27 +547,27 @@
             descriptors, providing rich auxiliary knowledge for fine-grained model discrimination.
           </p>
 
-          <h3>Pro-Planes</h3>
+          <h3>PSP.Plane</h3>
           <div class="gallery-item data-overview planes-data-overview">
-            <img src="assets/images/pro-planes.png" alt="Pro-Planes data overview" />
-            <p>Data overview of Pro-Planes.</p>
+            <img src="assets/images/pro-planes.png" alt="PSP.Plane data overview" />
+            <p>Data overview of PSP.Plane.</p>
           </div>
           <p>
-            The images in <strong>Pro-Planes</strong> are collected from existing datasets, namely MAR20 and
+            The images in <strong>PSP.Plane</strong> are collected from existing datasets, namely MAR20 and
             FAIR1M-v2, with spatial resolutions ranging from <strong>0.3 m to 1.1 m</strong>. We retain the original
             category annotations and directly adopt the official training and validation splits of MAR20 and
             FAIR1M-v2, which are merged into a unified dataset.
           </p>
 
           <p>
-            The resulting <strong>Pro-Planes</strong> dataset contains <strong>6,192 training images</strong> with
+            The resulting <strong>PSP.Plane</strong> dataset contains <strong>6,192 training images</strong> with
             <strong>28,216 instances</strong> and <strong>4,567 validation images</strong> with
             <strong>23,572 instances</strong>. Both splits cover <strong>30 airplane model categories</strong>.
           </p>
 
-          <h3>Pro-Planes Taxonomy</h3>
+          <h3>PSP.Plane Taxonomy</h3>
           <p>
-            Similar to <strong>Pro-Ships</strong>, the 30 airplane models in <strong>Pro-Planes</strong> are
+            Similar to <strong>PSP.Ship</strong>, the 30 airplane models in <strong>PSP.Plane</strong> are
             organized into a <strong>four-level hierarchical taxonomy</strong> according to publicly available
             airplane classification schemes. The first level is the root category <em>plane</em>. The second level
             groups planes by usage into <em>military (M)</em> and <em>civil (C)</em>. The third level further refines
@@ -577,10 +577,10 @@
             <em>Airbus A330</em>, <em>Boeing 747</em>, and <em>COMAC C919</em>.
           </p>
 
-          <h3>Pro-Planes Attributes</h3>
+          <h3>PSP.Plane Attributes</h3>
           <p>
             For each airplane model, we annotate <strong>9 attributes</strong> covering the same aspects as those in
-            <strong>Pro-Ships</strong>, including absolute size cues, stylistic semantic cues, and structural detail
+            <strong>PSP.Ship</strong>, including absolute size cues, stylistic semantic cues, and structural detail
             cues. Specifically, the absolute size cues include <em>wingspan</em>, <em>length</em>, and
             <em>aspect ratio</em>; the stylistic semantic cue is represented by the <em>manufacturer</em>; and the
             structural detail cues include <em>wing shape</em>, <em>wing position</em>, <em>engine number</em>,
@@ -602,7 +602,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>Pro-Ships</td>
+                <td>PSP.Ship</td>
                 <td>Google Earth, ShipRSImageNet, MCSD, DOTA-v2</td>
                 <td>0.1 m – 2 m</td>
                 <td>1,953</td>
@@ -611,7 +611,7 @@
                 <td>11</td>
               </tr>
               <tr>
-                <td>Pro-Planes</td>
+                <td>PSP.Plane</td>
                 <td>MAR20, FAIR1M-v2</td>
                 <td>0.3 m – 1.1 m</td>
                 <td>10,759</td>
@@ -626,18 +626,18 @@
         <section id="statistics">
           <h2>Dataset Statistics</h2>
           <p>
-            The following statistics summarize the scale of <strong>Pro-Ships</strong> and
-            <strong>Pro-Planes</strong>.
+            The following statistics summarize the scale of <strong>PSP.Ship</strong> and
+            <strong>PSP.Plane</strong>.
           </p>
 
           <div class="stats-grid">
             <div class="stat-card">
               <h3>1,953</h3>
-              <p>Pro-Ships Images</p>
+              <p>PSP.Ship Images</p>
             </div>
             <div class="stat-card">
               <h3>5,214</h3>
-              <p>Pro-Ships Instances</p>
+              <p>PSP.Ship Instances</p>
             </div>
             <div class="stat-card">
               <h3>106</h3>
@@ -649,11 +649,11 @@
             </div>
             <div class="stat-card">
               <h3>10,759</h3>
-              <p>Pro-Planes Images</p>
+              <p>PSP.Plane Images</p>
             </div>
             <div class="stat-card">
               <h3>51,788</h3>
-              <p>Pro-Planes Instances</p>
+              <p>PSP.Plane Instances</p>
             </div>
             <div class="stat-card">
               <h3>30</h3>
@@ -694,13 +694,13 @@
             </thead>
             <tbody>
               <tr>
-                <td>Pro-Ships</td>
+                <td>PSP.Ship</td>
                 <td>Ship</td>
                 <td>106</td>
                 <td>Model-specific ship detection in aerial images.</td>
               </tr>
               <tr>
-                <td>Pro-Planes</td>
+                <td>PSP.Plane</td>
                 <td>Plane</td>
                 <td>30</td>
                 <td>Model-specific airplane detection in aerial images.</td>
@@ -720,20 +720,20 @@
             </thead>
             <tbody>
               <tr>
-                <td>Pro-Ships Training Set</td>
-                <td>Training images and annotations for Pro-Ships</td>
+                <td>PSP.Ship Training Set</td>
+                <td>Training images and annotations for PSP.Ship</td>
                 <td>To be updated</td>
                 <td><a href="#" target="_blank">Download</a></td>
               </tr>
               <tr>
-                <td>Pro-Planes Training Set</td>
-                <td>Training annotations and formatting script for Pro-Planes</td>
+                <td>PSP.Plane Training Set</td>
+                <td>Training annotations and formatting script for PSP.Plane</td>
                 <td>To be updated</td>
                 <td><a href="#" target="_blank">Download</a></td>
               </tr>
               <tr>
                 <td>Taxonomy and Attribute Files</td>
-                <td>Hierarchical taxonomy and attribute annotations for Pro-Ships</td>
+                <td>Hierarchical taxonomy and attribute annotations for PSP.Ship</td>
                 <td>To be updated</td>
                 <td><a href="#" target="_blank">Download</a></td>
               </tr>
@@ -844,15 +844,15 @@
           <p>
             The following table reports the performance comparison between general detectors
             and state-of-the-art fine-grained object detection methods on
-            <strong>Pro-Ships</strong> and <strong>Pro-Planes</strong> datasets.
+            <strong>PSP.Ship</strong> and <strong>PSP.Plane</strong> datasets.
           </p>
 
-          <h2>Pro-Ships</h2>
+          <h2>PSP.Ship</h2>
 
           <div style="overflow-x: auto;">
             <table>
               <caption style="caption-side: bottom; text-align: left; margin-top: 10px; color: #555; font-size: 14px;">
-                Performance comparison between general detectors and state-of-the-art fine-grained object detection methods on Pro-Ships.
+                Performance comparison between general detectors and state-of-the-art fine-grained object detection methods on PSP.Ship.
               </caption>
               <thead>
                 <tr>
@@ -1292,12 +1292,12 @@
             </table>
           </div>
 
-          <h2>Pro-Planes</h2>
+          <h2>PSP.Plane</h2>
 
           <div style="overflow-x: auto;">
             <table>
               <caption style="caption-side: bottom; text-align: left; margin-top: 10px; color: #555; font-size: 14px;">
-                Performance comparison on Pro-Planes.
+                Performance comparison on PSP.Plane.
               </caption>
               <thead>
                 <tr>
@@ -1495,7 +1495,7 @@
         <a href="https://www.gaofen-challenge.com/benchmark" target="_blank" rel="noopener noreferrer">FAIR1M</a> |
         <a href="https://www.scidb.cn/en/detail?dataSetId=37f8d79508194b4eb22f6ca59ba28514" target="_blank" rel="noopener noreferrer">MAR20</a>
       </p>
-      <p>© 2026 Pro-Ships &amp; Pro-Planes Benchmark. All rights reserved.</p>
+      <p>© 2026 PSP.Ship &amp; PSP.Plane Benchmark. All rights reserved.</p>
     </div>
   </footer>
   <!-- =========================
